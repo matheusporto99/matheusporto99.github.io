@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Cristina Clebis | Tratamento para Dor Crônica</title>
+    
+    <!-- SEO Meta Description -->
+    <meta name="description" content="Tratamento especializado para dor crônica com a Dra. Cristina Clebis. Abordagem humanizada para fibromialgia, dores de cabeça, artrose e mais. Avalie seu caso.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F9FB;
+            color: #4A4A4A;
+        }
+        .text-calm-blue { color: #66a7ca; }
+        .bg-calm-blue { background-color: #66a7ca; }
+        .border-calm-blue { border-color: #66a7ca; }
+        
+        .text-soft-gold { color: #C0B283; }
+        .bg-soft-gold { background-color: #C0B283; }
+        .border-soft-gold { border-color: #C0B283; }
+
+        .bg-lavender-accent { background-color: #DEE1EB; }
+        .border-lavender-accent { border-color: #b39dc0; }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #3A506B;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-button {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .hero-button:hover {
+             box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading spinner styles */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #66a7ca;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ==== HEADER / NAVIGATION ==== -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-lg md:text-xl font-semibold text-[#3A506B]">
+                Dra. Cristina Clebis <span class="font-light hidden sm:inline">| Medicina Intervencionista da Dor</span>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#autoridade" class="text-gray-600 hover:text-soft-gold transition-colors">Sobre</a>
+                <a href="#diferencial" class="text-gray-600 hover:text-soft-gold transition-colors">Abordagem</a>
+                <a href="#resultados" class="text-gray-600 hover:text-soft-gold transition-colors">Casos Reais</a>
+                <a href="#faq" class="text-gray-600 hover:text-soft-gold transition-colors">Dúvidas</a>
+            </nav>
+            <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-calm-blue text-white text-sm font-medium py-2 px-4 rounded-lg shadow-md hover:bg-opacity-90">
+                Avaliar Meu Caso Agora
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==== HERO SECTION ==== -->
+        <section id="hero" class="relative min-h-screen flex items-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/CLbmn2Dm/JPG.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+            <!-- Gradient Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
+            <div class="container mx-auto px-6 relative z-20">
+                <div class="max-w-xl pt-56 md:pt-16 text-center md:text-left">
+                    <span class="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1 rounded-full uppercase tracking-wider">
+                        Especialista em Medicina Intervencionista da Dor
+                    </span>
+                    <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight text-white">
+                        Dor constante não é normal — e você não precisa enfrentá-la sozinha.
+                    </h1>
+                    <p class="text-lg md:text-xl font-light text-gray-200 mb-8">
+                        Seja dor de cabeça, nas articulações ou no corpo inteiro, a Dra. Cristina oferece um plano ético, completo e individualizado para mulheres que não aceitam mais viver com dor.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                        <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button hero-button bg-calm-blue text-white w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-lg">
+                            Avaliar Meu Caso Agora
+                        </a>
+                        <a href="#analise-dor" class="cta-button hero-button bg-white/20 backdrop-blur-sm border-2 border-white/50 text-white w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-lg hover:bg-white hover:text-[#3A506B]">
+                            ✨ Entender Minha Dor
+                        </a>
+                    </div>
+                </div>
+            </div>
+             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 w-full px-6">
+                <p class="bg-black/20 text-white/90 text-xs font-medium px-4 py-2 rounded-full backdrop-blur-sm max-w-md mx-auto text-center">
+                    +200 pacientes atendidas com planos personalizados | Atendimento ético com base em evidências
+                </p>
+            </div>
+        </section>
+
+        <!-- ==== AUTORIDADE ÉTICA ==== -->
+        <section id="autoridade" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="w-full md:w-1/3 fade-in">
+                        <img src="https://i.postimg.cc/xThSy5fX/Dra-Cristina.png" alt="Retrato da Dra. Cristina Clebis" class="rounded-lg shadow-2xl object-cover w-full h-full">
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left fade-in">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Uma medicina que escuta antes de tratar.</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Dra. Cristina Clebis acredita que o tratamento da dor crônica começa com uma profunda compreensão da jornada de cada paciente. Com mais de 10 anos de experiência, ela desenvolveu uma abordagem que integra o mais avançado conhecimento clínico com uma escuta ativa e empática.
+                        </p>
+                        <div class="bg-lavender-accent/40 border-l-4 border-calm-blue p-6 rounded-r-lg text-left">
+                            <h3 class="text-xl font-semibold mb-2">Meu Diferencial</h3>
+                            <p class="text-gray-600">
+                                "Eu não trato apenas o sintoma; eu cuido da mulher por trás da dor. Meu objetivo é criar um plano terapêutico que não só alivie o desconforto, mas que também devolva a confiança, a energia e a alegria de viver, respeitando a individualidade de cada uma."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== GEMINI API: ENTENDA SUA DOR ==== -->
+        <section id="analise-dor" class="py-20 md:py-28 bg-lavender-accent/30">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">✨ Entenda Sua Dor com Nossa IA</h2>
+                    <p class="text-lg text-gray-700 mb-8 fade-in">
+                        Descreva sua dor ou desconforto no campo abaixo. Nossa assistente virtual, com tecnologia Gemini, irá fornecer informações úteis e perguntas que você pode levar à sua consulta.
+                    </p>
+                    <div class="bg-white p-8 rounded-lg shadow-xl fade-in">
+                        <textarea id="pain-description" rows="5" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-calm-blue focus:border-transparent transition" placeholder="Ex: 'Sinto uma dor de cabeça latejante do lado direito, que piora com a luz e às vezes me dá enjoo. Ela aparece umas 3 vezes por mês.'"></textarea>
+                        <button id="analyze-button" class="cta-button bg-calm-blue text-white w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-lg mt-6">
+                            Analisar Agora
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4"><strong>Aviso:</strong> Esta ferramenta não fornece diagnóstico médico. As informações são para fins educacionais. Consulte sempre um profissional de saúde qualificado.</p>
+                    </div>
+                    <!-- Result Area -->
+                    <div id="result-area" class="mt-8 text-left">
+                        <div id="loader" class="hidden mx-auto loader"></div>
+                        <div id="gemini-response" class="bg-white p-8 rounded-lg shadow-xl prose max-w-none"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== O QUE FAÇO DIFERENTE (ABORDAGEM) ==== -->
+        <section id="diferencial" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Uma abordagem integrativa, sem falsas promessas.</h2>
+                    <p class="text-lg text-gray-700 fade-in">
+                        O tratamento da dor crônica é uma jornada, não um evento. Meu método é construído sobre três pilares essenciais que trabalham em conjunto para criar um alívio sustentável e uma melhora real na sua qualidade de vida.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-soft-gold fade-in">
+                        <h3 class="text-xl font-semibold mb-2">Diagnóstico de Precisão</h3>
+                        <p class="text-gray-600">Vamos além do sintoma. Utilizamos uma análise clínica detalhada para entender os gatilhos, o padrão da sua dor e os fatores associados, criando um mapa completo da sua condição.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-soft-gold fade-in" style="transition-delay: 150ms;">
+                        <h3 class="text-xl font-semibold mb-2">Plano Terapêutico Individualizado</h3>
+                        <p class="text-gray-600">Seu plano pode incluir procedimentos intervencionistas, modulação hormonal, suplementação e mudanças no estilo de vida, tudo alinhado às suas necessidades únicas.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-soft-gold fade-in" style="transition-delay: 300ms;">
+                        <h3 class="text-xl font-semibold mb-2">Acompanhamento Humanizado</h3>
+                        <p class="text-gray-600">Oferecemos um acompanhamento próximo para ajustar o plano, celebrar cada conquista e oferecer suporte nos momentos de desafio. Você não estará sozinha.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== PROCESSO ==== -->
+        <section id="como-funciona" class="py-20 md:py-28 bg-lavender-accent/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Sua jornada para o bem-estar <span class="block text-3xl font-normal text-gray-700 mt-2">em 4 etapas.</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="fade-in">
+                        <div class="mx-auto bg-calm-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                        <h3 class="text-xl font-semibold mb-2">Escuta Profunda</h3>
+                        <p class="text-gray-600">Nossa primeira conversa é para ouvir sua história e entender seus objetivos de vida.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 150ms;">
+                        <div class="mx-auto bg-calm-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                        <h3 class="text-xl font-semibold mb-2">Mapeamento Clínico</h3>
+                        <p class="text-gray-600">Traçamos um diagnóstico preciso com base na conversa e em exames complementares.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 300ms;">
+                        <div class="mx-auto bg-calm-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                        <h3 class="text-xl font-semibold mb-2">Plano Terapêutico</h3>
+                        <p class="text-gray-600">Juntas, definiremos um plano de ação realista e 100% personalizado para você.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 450ms;">
+                        <div class="mx-auto bg-calm-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                        <h3 class="text-xl font-semibold mb-2">Acompanhamento</h3>
+                        <p class="text-gray-600">Monitoramos seu progresso, ajustamos o plano e garantimos que você se sinta amparada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== CASOS REAIS (DEPOIMENTOS) - SLIDER ==== -->
+        <section id="resultados" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Vidas que reencontraram o equilíbrio.</h2>
+                    <p class="text-lg text-gray-700 fade-in">
+                        Relatos de pacientes que decidiram buscar um novo caminho e hoje desfrutam de uma vida com mais qualidade e menos dor.
+                    </p>
+                </div>
+                <div x-data="{ activeSlide: 1, totalSlides: 5, autoplay: null, startAutoplay() { this.autoplay = setInterval(() => { this.activeSlide = (this.activeSlide % this.totalSlides) + 1; }, 8000); }, stopAutoplay() { clearInterval(this.autoplay); } }" x-init="startAutoplay()" @mouseover="stopAutoplay()" @mouseout="startAutoplay()" class="relative max-w-3xl mx-auto fade-in">
+                    <div class="relative min-h-[420px] md:min-h-[320px] lg:min-h-[280px] w-full">
+                        <!-- Testimonial 1 -->
+                        <div x-show="activeSlide === 1" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 w-full">
+                            <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-lavender-accent flex flex-col h-full">
+                                <p class="text-gray-600 italic mb-6 flex-grow">"A Dra. É um anjo. Me ajudou muito com a minha fibromialgia. Graças a ela hoje eu quase não sinto dores. Ela me ajudou no momento em que eu não sabia mais o que fazer. Hoje faço atividade fisica e quase nunca preciso de remédios para dor. Só tenho agradecer."</p>
+                                <div><p class="font-semibold text-[#3A506B]">Karen L.</p></div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div x-show="activeSlide === 2" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 w-full">
+                             <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-lavender-accent flex flex-col h-full">
+                                <p class="text-gray-600 italic mb-6 flex-grow">"Dr. Cris! Você é uma bênção na minha vida, depois que iniciei o tratamento contigo, minha vida melhorou muito mesmo. Além de realizar os procedimentos com excelência, se preocupa comigo em todos os aspectos da vida. Gratidão por sua vocação e dedicação!"</p>
+                                <div><p class="font-semibold text-[#3A506B]">D.C.</p></div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div x-show="activeSlide === 3" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 w-full">
+                            <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-lavender-accent flex flex-col h-full">
+                                <p class="text-gray-600 italic mb-6 flex-grow">"A Dra Cristina Clebis foi a primeira profissional, depois de uma verdadeira via crucis por longos 4 anos com péssimas experiências, que me acolheu com empatia, sensibilidade e carinho que o meu quadro de dor crônica por fibromialgia exige... Fibromialgia não tem cura, mas a dra está me proporcionando qualidade de vida! Super indico!"</p>
+                                <div><p class="font-semibold text-[#3A506B]">Andressa Jerosch</p></div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div x-show="activeSlide === 4" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 w-full">
+                             <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-lavender-accent flex flex-col h-full">
+                                <p class="text-gray-600 italic mb-6 flex-grow">"Excelente profissional, e um ser humano incrível. Médica especializada que trata o paciente de forma integral com dedicação, eficiência e carinho. Super recomendo e indico. Com certeza o mundo precisa de mais médicos como ela."</p>
+                                <div><p class="font-semibold text-[#3A506B]">Cristiane Fast</p></div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div x-show="activeSlide === 5" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 w-full">
+                            <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-lavender-accent flex flex-col h-full">
+                                <p class="text-gray-600 italic mb-6 flex-grow">"Dra Cristina curou os meus problemas de tendinite nos ombros. Se não fosse por ela, eu teria de fazer cirurgia. Ela é uma excelente pessoa e muito profissional."</p>
+                                <div><p class="font-semibold text-[#3A506B]">Leonardo Fida</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-4">
+                        <button @click="activeSlide = (activeSlide === 1) ? totalSlides : activeSlide - 1" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                        </button>
+                        <div class="flex items-center space-x-2">
+                            <template x-for="i in totalSlides" :key="i">
+                                <button @click="activeSlide = i" :class="{ 'bg-calm-blue': activeSlide === i, 'bg-gray-300 hover:bg-gray-400': activeSlide !== i }" class="w-2.5 h-2.5 rounded-full transition"></button>
+                            </template>
+                        </div>
+                        <button @click="activeSlide = (activeSlide % totalSlides) + 1" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== ALINHAMENTO DE EXPECTATIVAS ==== -->
+        <section id="etico" class="py-20 md:py-28 bg-calm-blue text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in text-white">Este tratamento é para você?</h2>
+                    <p class="text-lg text-blue-100 mb-12 fade-in">
+                        Meu compromisso é com a ética e a transparência. Este tratamento é ideal para mulheres que:
+                    </p>
+                    <div class="space-y-4 text-left max-w-md mx-auto fade-in">
+                        <div class="flex items-start space-x-3"><span class="flex-shrink-0 text-soft-gold mt-1">✓</span><span>Buscam entender a raiz de sua dor, não apenas mascarar sintomas.</span></div>
+                        <div class="flex items-start space-x-3"><span class="flex-shrink-0 text-soft-gold mt-1">✓</span><span>Estão dispostas a participar ativamente do seu processo de melhora.</span></div>
+                        <div class="flex items-start space-x-3"><span class="flex-shrink-0 text-soft-gold mt-1">✓</span><span>Valorizam uma relação médico-paciente baseada na confiança.</span></div>
+                        <div class="flex items-start space-x-3"><span class="flex-shrink-0 text-soft-gold mt-1">✓</span><span>Compreendem que a melhora é um processo gradual e sustentável.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==== POR QUE NÃO ESPERAR ==== -->
+        <section id="urgencia" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">O custo invisível de adiar o cuidado.</h2>
+                    <p class="text-lg text-gray-700 mb-8 fade-in">
+                        A dor crônica não tratada adequadamente não afeta apenas seu corpo. Ela cobra um preço em todas as áreas da sua vida.
+                    </p>
+                    <ul class="text-left space-y-4 max-w-xl mx-auto fade-in">
+                        <li class="flex items-start p-4 bg-lavender-accent/30 rounded-lg"><span class="text-soft-gold mr-4 text-2xl">→</span><div><h3 class="font-semibold">Na sua carreira:</h3><p class="text-gray-600">A produtividade diminui e a energia para buscar novas oportunidades desaparece.</p></div></li>
+                        <li class="flex items-start p-4 bg-lavender-accent/30 rounded-lg"><span class="text-soft-gold mr-4 text-2xl">→</span><div><h3 class="font-semibold">Nos seus relacionamentos:</h3><p class="text-gray-600">A irritabilidade e o cansaço constante podem criar distância de quem você ama.</p></div></li>
+                        <li class="flex items-start p-4 bg-lavender-accent/30 rounded-lg"><span class="text-soft-gold mr-4 text-2xl">→</span><div><h3 class="font-semibold">Na sua saúde mental:</h3><p class="text-gray-600">A luta diária contra a dor pode levar à ansiedade e à depressão.</p></div></li>
+                    </ul>
+                    <p class="mt-12 text-lg text-gray-800 font-medium fade-in">
+                        Investir no seu tratamento agora não é um custo, é a recuperação do seu bem mais precioso: <span class="text-soft-gold">você mesma</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== FAQ ==== -->
+        <section id="faq" class="py-20 md:py-28 bg-lavender-accent/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Dúvidas que talvez estejam na sua mente.</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4 fade-in" x-data="{ open: 1 }">
+                    <div class="bg-white rounded-lg shadow-md"><button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">O tratamento é coberto pelo plano de saúde?</span><span class="text-soft-gold text-2xl" x-text="open === 1 ? '-' : '+'"></span></button><div x-show="open === 1" x-collapse class="p-6 pt-0 text-gray-600"><p>Trabalhamos com diversos planos de saúde. Durante a avaliação inicial, nossa equipe verificará a cobertura do seu plano e explicará todas as opções de forma transparente.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-md"><button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Terei que tomar remédios para sempre?</span><span class="text-soft-gold text-2xl" x-text="open === 2 ? '-' : '+'"></span></button><div x-show="open === 2" x-collapse class="p-6 pt-0 text-gray-600"><p>O objetivo é o contrário. Usamos a medicação como uma ferramenta para quebrar o ciclo da dor. A meta é, gradualmente, reduzir a dependência de medicamentos à medida que seu corpo encontra um novo equilíbrio.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-md"><button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">O que torna este tratamento diferente?</span><span class="text-soft-gold text-2xl" x-text="open === 3 ? '-' : '+'"></span></button><div x-show="open === 3" x-collapse class="p-6 pt-0 text-gray-600"><p>A diferença está na abordagem integrativa e personalizada. Investigamos profundamente as causas e os gatilhos da sua dor, combinando medicina intervencionista com cuidados com o estilo de vida, nutrição e saúde emocional.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-md"><button @click="open = (open === 4 ? 0 : 4)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Em quanto tempo verei os resultados?</span><span class="text-soft-gold text-2xl" x-text="open === 4 ? '-' : '+'"></span></button><div x-show="open === 4" x-collapse class="p-6 pt-0 text-gray-600"><p>Cada organismo reage de uma forma. Algumas pacientes sentem alívio nas primeiras semanas. No entanto, a melhora sustentável é um processo que construímos juntas. O foco é no progresso constante, não na velocidade.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== FINAL CTA ==== -->
+        <section id="cta-final" class="relative py-20 md:py-32 text-white text-center bg-[#3A506B]">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 fade-in text-white">Chegou a hora de trocar a dor pela paz.</h2>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 fade-in">
+                        Dar o primeiro passo é um ato de coragem e autocuidado. Permita-se explorar um caminho onde a dor não é mais a protagonista da sua história.
+                    </p>
+                    <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-calm-blue text-white w-full sm:w-auto font-semibold py-4 px-10 rounded-lg text-xl shadow-lg hover:bg-opacity-90 fade-in">
+                        Quero Avaliar Meu Caso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==== FOOTER ==== -->
+    <footer class="bg-[#3A506B] text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-semibold text-xl">Dra. Cristina Clebis Martins</p>
+            <p class="text-sm text-gray-300 mt-2">Especialista em Dor | Intervenção em Dor</p>
+            <p class="text-sm text-gray-300 mt-1">CRM 23711 | RQE 19250 | RQE 1807</p>
+            <p class="text-xs text-gray-400 mt-4 max-w-2xl mx-auto">
+                As informações contidas neste site têm caráter informativo e educacional. O diagnóstico e o tratamento de condições médicas devem ser realizados por um profissional qualificado.
+            </p>
+            <div class="mt-6">
+                <a href="https://www.instagram.com/dra.crisclebis/" target="_blank" class="inline-block text-gray-300 hover:text-white" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.203 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                </a>
+            </div>
+            <p class="text-xs text-gray-400 mt-6">&copy; 2024 Dra. Cristina Clebis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for fade-in animations and Gemini API call -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade-in animation logic
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Gemini API feature logic
+            const analyzeButton = document.getElementById('analyze-button');
+            const painDescription = document.getElementById('pain-description');
+            const loader = document.getElementById('loader');
+            const geminiResponseContainer = document.getElementById('gemini-response');
+
+            analyzeButton.addEventListener('click', async () => {
+                const description = painDescription.value;
+                if (!description.trim()) {
+                    geminiResponseContainer.innerHTML = '<p>Por favor, descreva sua dor para que a nossa assistente de IA possa ajudar.</p>';
+                    return;
+                }
+
+                loader.classList.remove('hidden');
+                geminiResponseContainer.innerHTML = '';
+                analyzeButton.disabled = true;
+                analyzeButton.textContent = 'Analisando...';
+
+                // This is the carefully crafted prompt for the Gemini API
+                const prompt = `
+                    Você é um assistente virtual informativo e empático para o site da Dra. Cristina Clebis, uma especialista em dor crônica. Sua função é ajudar os usuários a entenderem melhor suas dores e a importância de uma consulta médica.
+                    Analise a seguinte descrição de dor de um usuário. Com base nela, forneça uma resposta que inclua:
+                    1.  Uma frase de validação empática dos sentimentos do usuário.
+                    2.  Informações gerais sobre os *tipos* de dores que podem ter características semelhantes (ex: dor neuropática, dor inflamatória, dor tensional), sem NUNCA mencionar uma condição ou diagnóstico específico. Use uma linguagem simples.
+                    3.  Uma seção chamada "Perguntas para sua consulta:" com 2-3 perguntas que o usuário poderia fazer a um médico para ajudar a esclarecer seu quadro.
+                    4.  Um parágrafo final forte e claro, reforçando que apenas uma avaliação médica completa com um especialista como a Dra. Cristina pode fornecer um diagnóstico e plano de tratamento corretos.
+                    
+                    REGRAS IMPORTANTES:
+                    - NÃO forneça diagnósticos.
+                    - NÃO sugira tratamentos ou medicamentos.
+                    - NÃO use linguagem que possa ser interpretada como um conselho médico.
+                    - Mantenha um tom de apoio e informativo.
+                    - A resposta deve ser em português do Brasil e formatada em HTML com parágrafos <p> e listas <ul><li>.
+                    
+                    Descrição do usuário: "${description}"
+                `;
+
+                try {
+                    // Function to call Gemini API with exponential backoff
+                    const callGemini = async (retryCount = 0) => {
+                        const maxRetries = 5;
+                        const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff
+
+                        if (retryCount > 0) {
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                        }
+
+                        let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                        const payload = { contents: chatHistory };
+                        const apiKey = "AIzaSyCwzTroDn_R0haqyfhkaXDzocBZHIvVDj8"; // API key is handled by the environment
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                        
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.status === 429 && retryCount < maxRetries) {
+                            // Throttled, retry with backoff
+                            return callGemini(retryCount + 1);
+                        }
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        
+                        return response.json();
+                    };
+
+                    const result = await callGemini();
+                    
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        geminiResponseContainer.innerHTML = text; // Gemini will provide HTML formatted text
+                    } else {
+                        throw new Error("Resposta da API inválida ou vazia.");
+                    }
+
+                } catch (error) {
+                    console.error("Erro ao chamar a API Gemini:", error);
+                    geminiResponseContainer.innerHTML = '<p class="text-red-600">Ocorreu um erro ao processar sua solicitação. Por favor, tente novamente mais tarde.</p>';
+                } finally {
+                    loader.classList.add('hidden');
+                    analyzeButton.disabled = false;
+                    analyzeButton.textContent = 'Analisar Novamente';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
