@@ -139,10 +139,9 @@
 
     <main>
 
-        <!-- ==== HERO SECTION ==== -->
-        <section id="hero" class="relative min-h-screen flex items-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/CLbmn2Dm/JPG.jpg');">
+        <!-- HERO SECTION - DESKTOP VERSION -->
+        <section id="hero-desktop" class="hidden lg:flex relative min-h-screen items-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/CLbmn2Dm/JPG.jpg');">
             <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
-            <!-- Gradient Overlay -->
             <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-xl pt-56 md:pt-16 text-center md:text-left">
@@ -163,6 +162,31 @@
                             ✨ Entender Minha Dor
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERO SECTION - MOBILE VERSION -->
+        <section id="hero-mobile" class="lg:hidden pt-16 bg-white">
+            <div class="min-h-[50vh] bg-cover bg-center" style="background-image: url('https://i.postimg.cc/CLbmn2Dm/JPG.jpg');">
+            </div>
+            <div class="p-8 text-center">
+                <span class="inline-block text-calm-blue text-sm font-semibold px-4 py-1 rounded-full uppercase tracking-wider bg-calm-blue/10">
+                    Especialista em Medicina Intervencionista da Dor
+                </span>
+                <h1 class="text-3xl font-bold mt-4 mb-4 leading-tight">
+                    Dor constante não é normal — e você não precisa enfrentá-la sozinha.
+                </h1>
+                <p class="text-base text-gray-600 mb-6">
+                    Seja dor de cabeça, nas articulações ou no corpo inteiro, a Dra. Cristina oferece um plano ético, completo e individualizado para mulheres que não aceitam mais viver com dor.
+                </p>
+                <div class="flex flex-col items-center gap-4">
+                    <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-calm-blue text-white w-full font-semibold py-3 px-8 rounded-lg text-lg">
+                        Avaliar Meu Caso Agora
+                    </a>
+                    <a href="#analise-dor" class="cta-button bg-gray-200 text-gray-800 w-full font-semibold py-3 px-8 rounded-lg text-lg hover:bg-gray-300">
+                        ✨ Entender Minha Dor
+                    </a>
                 </div>
             </div>
         </section>
@@ -191,7 +215,7 @@
         </section>
 
         <!-- ==== NOVA SEÇÃO: TRATAMENTO DE PONTA ==== -->
-        <section id="tratamento-de-ponta" class="py-20 md:py-28 bg-white">
+        <section id="tratamento-de-ponta" class="py-20 md:py-28 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Tratamento de Ponta, Agora Mais Perto de Você</h2>
