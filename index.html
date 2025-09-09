@@ -2,7 +2,12 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>[x-cloak]{display:none !important}</style>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <style>
+      html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+    </style>
     <title>Dra. Cristina Clebis | Tratamento para Dor Crônica</title>
     
     <meta name="description" content="Tratamento especializado para dor crônica com a Dra. Cristina Clebis. Abordagem humanizada para fibromialgia, dores de cabeça, artrose e mais. Avalie seu caso.">
@@ -13,10 +18,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
     <style>
         body {
             font-family: 'Lora', 'Palatino Linotype', serif;
@@ -26,7 +29,6 @@
         .logo-font {
             font-family: 'Cinzel', serif;
         }
-        /* Nova Paleta de Cores */
         .bg-custom-purple-light { background-color: #F7F5F9; }
         .bg-custom-purple { background-color: #E9E4ED; }
         .text-custom-purple-dark { color: #594A64; }
@@ -71,6 +73,15 @@
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
+        
+        @media (max-width:640px){
+         .whatsapp-float{
+           width:52px;
+           height:52px;
+           right:16px;
+           bottom:calc(16px + env(safe-area-inset-bottom));
+         }
+        }
 
         .card {
             background-color: white;
@@ -113,21 +124,21 @@
                 Avaliar Meu Caso Agora
             </a>
             <div class="lg:hidden">
-                <button @click="open = !open" class="text-custom-purple-dark focus:outline-none z-50">
+                <button @click="open = !open" aria-expanded="false" aria-controls="mobileMenu" class="text-custom-purple-dark focus:outline-none z-50">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                 </button>
             </div>
         </div>
-        <div x-show="open" class="lg:hidden" @click.away="open = false">
-            <nav class="flex flex-col items-center space-y-4 py-4 border-t bg-white">
+        <nav id="mobileMenu" x-show="open" x-cloak :class="open ? '' : 'hidden'" class="lg:hidden" @click.away="open = false">
+            <div class="flex flex-col items-center space-y-4 py-4 border-t bg-white">
                 <a href="#diferencial" @click="open = false" class="text-gray-700">Abordagem</a>
                 <a href="#resultados" @click="open = false" class="text-gray-700">Casos Reais</a>
                 <a href="#faq" @click="open = false" class="text-gray-700">Dúvidas</a>
                 <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-custom-blue text-white text-base font-medium py-2 px-6 rounded-lg shadow-md">
                     Avaliar Meu Caso Agora
                 </a>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main class="pt-20">
@@ -141,7 +152,7 @@
                 <div class="container mx-auto px-6 relative z-10 min-h-[90vh] flex items-center">
                     <div class="max-w-xl text-left">
                         <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight text-white" style="font-family: 'Lora', serif;">
-                            Dor constante não é normal — e você não precisa enfrentá-la por mais tempo.
+                           Você não precisa conviver com a dor todos os dias.
                         </h1>
                         <p class="text-lg md:text-xl font-light text-gray-200 mb-8">
                             Seja dor de cabeça, nas articulações ou no corpo inteiro, a Dra. Cristina oferece um plano ético, completo e individualizado para pacientes que não aceitam mais viver com dor.
@@ -158,7 +169,7 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div class="relative z-10 flex flex-col justify-end flex-grow p-8">
                     <h1 class="text-3xl font-bold leading-tight text-white" style="font-family: 'Lora', serif;">
-                        Você não precisa conviver com a dor todos os dias!
+                        Você não precisa conviver com a dor todos os dias.
                     </h1>
                      <p class="mt-4 text-lg">
                         Dra. Cristina Clebis
@@ -304,9 +315,9 @@
                     <h2 class="text-3xl md:text-4xl font-bold">Dúvidas Frequentes</h2>
                 </div>
                 <div class="max-w-3xl mx-auto space-y-4" x-data="{ open: 1 }">
-                    <div class="border rounded-lg"><button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">O tratamento é coberto pelo plano de saúde?</span><span class="text-custom-blue text-2xl" x-text="open === 1 ? '-' : '+'"></span></button><div x-show="open === 1" x-collapse class="p-6 pt-0 text-gray-600"><p>Trabalhamos com diversos planos de saúde. Durante a avaliação inicial, nossa equipe verificará a cobertura do seu plano e explicará todas as opções de forma transparente.</p></div></div>
-                    <div class="border rounded-lg"><button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Terei que tomar remédios para sempre?</span><span class="text-custom-blue text-2xl" x-text="open === 2 ? '-' : '+'"></span></button><div x-show="open === 2" x-collapse class="p-6 pt-0 text-gray-600"><p>O objetivo é o contrário. Usamos a medicação como uma ferramenta para quebrar o ciclo da dor. A meta é, gradualmente, reduzir a dependência de medicamentos à medida que seu corpo encontra um novo equilíbrio.</p></div></div>
-                    <div class="border rounded-lg"><button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Em quanto tempo verei os resultados?</span><span class="text-custom-blue text-2xl" x-text="open === 3 ? '-' : '+'"></span></button><div x-show="open === 3" x-collapse class="p-6 pt-0 text-gray-600"><p>Cada organismo reage de uma forma. Algumas pessoas sentem alívio nas primeiras semanas. No entanto, a melhora sustentável é um processo que construímos juntos. O foco é no progresso constante, não na velocidade.</p></div></div>
+                    <div class="border rounded-lg"><button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">O tratamento é coberto pelo plano de saúde?</span><span class="text-custom-blue text-2xl" x-text="open === 1 ? '-' : '+'"></span></button><div x-show="open === 1" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>Trabalhamos com diversos planos de saúde. Durante a avaliação inicial, nossa equipe verificará a cobertura do seu plano e explicará todas as opções de forma transparente.</p></div></div>
+                    <div class="border rounded-lg"><button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Terei que tomar remédios para sempre?</span><span class="text-custom-blue text-2xl" x-text="open === 2 ? '-' : '+'"></span></button><div x-show="open === 2" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>O objetivo é o contrário. Usamos a medicação como uma ferramenta para quebrar o ciclo da dor. A meta é, gradualmente, reduzir a dependência de medicamentos à medida que seu corpo encontra um novo equilíbrio.</p></div></div>
+                    <div class="border rounded-lg"><button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Em quanto tempo verei os resultados?</span><span class="text-custom-blue text-2xl" x-text="open === 3 ? '-' : '+'"></span></button><div x-show="open === 3" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>Cada organismo reage de uma forma. Algumas pessoas sentem alívio nas primeiras semanas. No entanto, a melhora sustentável é um processo que construímos juntos. O foco é no progresso constante, não na velocidade.</p></div></div>
                 </div>
             </div>
         </section>
