@@ -29,6 +29,8 @@
         .logo-font {
             font-family: 'Cinzel', serif;
         }
+
+        /* PALETA AJUSTADA */
         .bg-custom-purple-light { background-color: #F7F5F9; }
         .bg-custom-purple { background-color: #E9E4ED; }
         .text-custom-purple-dark { color: #594A64; }
@@ -112,15 +114,15 @@
 
     <header x-data="{ open: false }" id="header" class="bg-white/90 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-custom-blue tracking-wider z-50 logo-font">
+            <a href="#" class="text-xl font-bold text-custom-purple-dark tracking-wider z-50 logo-font">
                 DRA. CRISTINA CLEBIS
             </a>
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#diferencial" class="text-gray-600 hover:text-custom-blue transition-colors">Abordagem</a>
-                <a href="#resultados" class="text-gray-600 hover:text-custom-blue transition-colors">Casos Reais</a>
-                <a href="#faq" class="text-gray-600 hover:text-custom-blue transition-colors">Dúvidas</a>
+                <a href="#diferencial" class="text-gray-600 hover:text-custom-purple-dark transition-colors">Abordagem</a>
+                <a href="#resultados" class="text-gray-600 hover:text-custom-purple-dark transition-colors">Casos Reais</a>
+                <a href="#faq" class="text-gray-600 hover:text-custom-purple-dark transition-colors">Dúvidas</a>
             </nav>
-            <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="hidden lg:inline-block cta-button bg-custom-blue text-white text-sm font-medium py-2 px-4 rounded-lg shadow-md hover:bg-opacity-90">
+            <a href="https://wa.me/5541984820272" target="_blank" class="hidden lg:inline-block cta-button bg-custom-purple-dark text-white text-sm font-medium py-2 px-4 rounded-lg shadow-lg hover:bg-opacity-90">
                 Avaliar Meu Caso Agora
             </a>
             <div class="lg:hidden">
@@ -134,7 +136,7 @@
                 <a href="#diferencial" @click="open = false" class="text-gray-700">Abordagem</a>
                 <a href="#resultados" @click="open = false" class="text-gray-700">Casos Reais</a>
                 <a href="#faq" @click="open = false" class="text-gray-700">Dúvidas</a>
-                <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-custom-blue text-white text-base font-medium py-2 px-6 rounded-lg shadow-md">
+                <a href="https://wa.me/5541984820272" target="_blank" class="cta-button bg-custom-purple-dark text-white text-base font-medium py-2 px-6 rounded-lg shadow-md">
                     Avaliar Meu Caso Agora
                 </a>
             </div>
@@ -143,9 +145,9 @@
 
     <main class="pt-20">
 
-        <!-- ==== HERO SECTION (Updated) ==== -->
+        <!-- HERO -->
         <section id="hero" class="relative bg-black">
-            <!-- Desktop view -->
+            <!-- Desktop -->
             <div class="hidden lg:block">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/CLmCFd3p/Prancheta-2.png');"></div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
@@ -154,31 +156,40 @@
                         <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight text-white" style="font-family: 'Lora', serif;">
                            Você não precisa conviver com a dor todos os dias.
                         </h1>
-                        <p class="text-lg md:text-xl font-light text-gray-200 mb-8">
+                        <p class="text-lg md:text-xl font-light text-gray-200 mb-4">
                             Seja dor de cabeça, nas articulações ou no corpo inteiro, a Dra. Cristina oferece um plano ético, completo e individualizado para pacientes que não aceitam mais viver com dor.
                         </p>
-                        <a href="https://form.respondi.app/BRMAGSRc" target="_blank" class="cta-button bg-custom-blue text-white w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-lg">
+                        <p class="text-base md:text-lg font-light text-gray-200 mb-8">
+                            Protocolos integrados para dor crônica, perda de peso em pacientes com dor e manejo de lipedema, sempre com segurança e critério médico.
+                        </p>
+                        <a href="https://wa.me/5541984820272" target="_blank" class="cta-button bg-custom-purple-dark text-white w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-lg">
                             Avaliar Meu Caso Agora
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Mobile view -->
-            <div class="lg:hidden relative text-white text-center min-h-[80vh] flex flex-col">
+            <!-- Mobile -->
+            <div class="lg-hidden relative text-white text-center min-h-[80vh] flex flex-col lg:hidden">
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/fTwjnYgv/Prancheta-1.png');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div class="relative z-10 flex flex-col justify-end flex-grow p-8">
                     <h1 class="text-3xl font-bold leading-tight text-white" style="font-family: 'Lora', serif;">
                         Você não precisa conviver com a dor todos os dias.
                     </h1>
-                     <p class="mt-4 text-lg">
+                    <p class="mt-4 text-lg">
                         Dra. Cristina Clebis
                     </p>
+                    <p class="mt-2 text-base text-gray-200">
+                        Protocolos para dor crônica, perda de peso e lipedema, com foco na causa e na sua qualidade de vida.
+                    </p>
+                    <a href="https://wa.me/5541984820272" target="_blank" class="mt-6 cta-button bg-custom-purple-dark text-white font-semibold py-3 px-6 rounded-lg text-base">
+                        Avaliar Meu Caso Agora
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ==== NOVA SEÇÃO DE BENEFÍCIOS (Updated) ==== -->
+        <!-- BENEFÍCIOS (CLARO) -->
         <section id="beneficios" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
@@ -189,27 +200,27 @@
 
                 <div class="mt-12 max-w-2xl mx-auto">
                     <div>
-                        <h4 class="text-xl font-bold mb-4 text-custom-blue text-center">Por que nosso tratamento é a melhor opção?</h4>
+                        <h4 class="text-xl font-bold mb-4 text-custom-purple-dark text-center">Por que nosso tratamento é a melhor opção?</h4>
                         <ul class="space-y-4 text-gray-600">
                             <li class="flex items-start">
-                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                <span><strong>Abordagem individualizada,</strong> baseada em avaliação clínica detalhada</span>
+                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-purple-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span><strong>Abordagem individualizada,</strong> baseada em avaliação clínica detalhada.</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                <span>Uso de <strong>técnicas modernas e minimamente invasivas,</strong> conforme protocolos reconhecidos</span>
+                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-purple-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span>Uso de <strong>técnicas modernas e minimamente invasivas,</strong> conforme protocolos reconhecidos.</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                <span>Atenção ao <strong>histórico do paciente</strong> e não apenas aos sintomas</span>
+                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-purple-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span>Atenção ao <strong>histórico do paciente</strong> e não apenas aos sintomas.</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                <span><strong>Acompanhamento contínuo</strong> para ajustes de tratamento e prevenção de complicações</span>
+                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-purple-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span><strong>Acompanhamento contínuo</strong> para ajustes de tratamento e prevenção de complicações.</span>
                             </li>
                              <li class="flex items-start">
-                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                                <span><strong>Mais de 15 anos de experiência</strong> em casos complexos de dor crônica</span>
+                                <svg class="flex-shrink-0 mr-3 mt-1 h-5 w-5 text-custom-purple-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <span><strong>Mais de 15 anos de experiência</strong> em casos complexos de dor crônica.</span>
                             </li>
                         </ul>
                     </div>
@@ -217,7 +228,8 @@
             </div>
         </section>
 
-        <section id="autoridade" class="py-20 md:py-28 bg-gray-50">
+        <!-- AUTORIDADE (CLARO) -->
+        <section id="autoridade" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     <div class="w-full md:w-2/5">
@@ -226,12 +238,12 @@
                     <div class="w-full md:w-3/5 text-center md:text-left">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Uma medicina que escuta antes de tratar.</h2>
                         <p class="text-lg text-gray-700 mb-6">
-                            Dra. Cristina Clebis acredita que o tratamento da dor crônica começa com uma profunda compreensão da jornada de cada paciente. Com +15 anos de experiência, ela desenvolveu uma abordagem que integra o mais avançado conhecimento clínico com uma escuta ativa e empática.
+                            Dra. Cristina Clebis acredita que o tratamento da dor crônica começa com uma profunda compreensão da jornada de cada paciente. Com mais de 15 anos de experiência, ela desenvolveu uma abordagem que integra o mais avançado conhecimento clínico com uma escuta ativa e empática.
                         </p>
-                        <div class="bg-white border-l-4 border-custom-blue p-6 rounded-r-lg text-left shadow-sm">
-                            <h3 class="text-xl font-semibold mb-2">Meu Diferencial</h3>
+                        <div class="bg-white border-l-4 border-custom-purple-dark p-6 rounded-r-lg text-left shadow-sm">
+                            <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Meu Diferencial</h3>
                             <p class="text-gray-600">
-                                "Eu não trato apenas o sintoma; eu cuido da pessoa por trás da dor. Meu objetivo é criar um plano terapêutico que não só alivie o desconforto, mas que também devolva a confiança, a energia e a alegria de viver, respeitando a individualidade de cada um(a)."
+                                "Eu não trato apenas o sintoma. Eu cuido da pessoa por trás da dor. Meu objetivo é criar um plano terapêutico que não só alivie o desconforto, mas que também devolva a confiança, a energia e a alegria de viver, respeitando a individualidade de cada um."
                             </p>
                         </div>
                     </div>
@@ -239,31 +251,68 @@
             </div>
         </section>
 
+        <!-- TRATAMENTO DE PONTA (CLARO) -->
         <section id="tratamento-de-ponta" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Tratamento de ponta, agora mais perto de você.</h2>
                     <p class="text-lg text-gray-700">
-                        Pacientes do Sul do Brasil não precisam mais viajar para grandes centros. Com +15 anos de experiência, a Dra. Cristina oferece o mesmo nível de excelência e tecnologia aqui, em Curitiba.
+                        Pacientes do Sul do Brasil não precisam mais viajar para grandes centros. Com mais de 15 anos de experiência, a Dra. Cristina oferece o mesmo nível de excelência e tecnologia em Curitiba.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                     <div class="card text-left">
-                        <h3 class="text-xl font-semibold mb-2">Tecnologia Avançada</h3>
-                        <p class="text-gray-600">Utilizamos os mesmos equipamentos e procedimentos minimamente invasivos encontrados nos melhores centros de dor do país.</p>
+                    <div class="card text-left">
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Tecnologia Avançada</h3>
+                        <p class="text-gray-600">Utilizamos equipamentos e procedimentos minimamente invasivos alinhados com os melhores centros de dor do país.</p>
                     </div>
                     <div class="card text-left">
-                        <h3 class="text-xl font-semibold mb-2">Conhecimento de Vanguarda</h3>
-                        <p class="text-gray-600">Constante atualização em congressos e estudos, trazendo o que há de mais moderno no tratamento da dor crônica.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Conhecimento de Vanguarda</h3>
+                        <p class="text-gray-600">Atualização constante em congressos e estudos, trazendo o que há de mais moderno no tratamento da dor crônica.</p>
                     </div>
                     <div class="card text-left">
-                        <h3 class="text-xl font-semibold mb-2">Cuidado e Proximidade</h3>
-                        <p class="text-gray-600">Receba um tratamento de excelência sem o desgaste de viagens, com um acompanhamento humano e próximo da sua casa.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Cuidado e Proximidade</h3>
+                        <p class="text-gray-600">Receba um tratamento de excelência sem o desgaste de viagens, com acompanhamento humano e próximo da sua realidade.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PERDA DE PESO E LIPEDEMA (FUNDO ROXO ESCURO) -->
+        <section id="perda-peso-lipedema" class="py-20 md:py-28 bg-custom-purple-dark">
+          <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Perda de peso e lipedema como aliados no controle da dor
+              </h2>
+              <p class="text-lg text-white/90">
+                Em muitos casos, o excesso de peso e o lipedema aumentam a dor nas articulações, pernas e coluna. A Dra. Cristina integra protocolos de manejo de peso ao tratamento da dor, sempre com segurança e critério médico.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="card">
+                <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Avaliação completa</h3>
+                <p class="text-gray-600">
+                  Análise do histórico de peso, da distribuição de gordura, da presença de lipedema e do impacto direto na sua dor.
+                </p>
+              </div>
+              <div class="card">
+                <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Plano integrado</h3>
+                <p class="text-gray-600">
+                  Combinação de tratamento da dor com estratégias de manejo de peso, sempre respeitando limites e com segurança.
+                </p>
+              </div>
+              <div class="card">
+                <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Foco na funcionalidade</h3>
+                <p class="text-gray-600">
+                  O objetivo principal é devolver mobilidade, reduzir a dor e melhorar sua qualidade de vida, não buscar resultados estéticos imediatos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMO FUNCIONA (CLARO COM CINZA) -->
         <section id="como-funciona" class="py-20 md:py-28 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -271,69 +320,190 @@
                     <p class="mt-4 text-lg text-gray-600">Um processo claro e humano, pensado em cada detalhe para o seu conforto e confiança.</p>
                 </div>
                 <div class="max-w-4xl mx-auto space-y-4">
-                    <div class="card flex items-start gap-4"><div class="bg-custom-blue text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">1</div><div><h4 class="text-xl font-semibold mb-1">Escuta Profunda</h4><p class="text-gray-600">Nossa primeira conversa é para ouvir sua história e entender seus objetivos de vida.</p></div></div>
-                    <div class="card flex items-start gap-4"><div class="bg-custom-blue text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">2</div><div><h4 class="text-xl font-semibold mb-1">Mapeamento Clínico</h4><p class="text-gray-600">Traçamos um diagnóstico preciso com base na conversa e em exames complementares.</p></div></div>
-                    <div class="card flex items-start gap-4"><div class="bg-custom-blue text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">3</div><div><h4 class="text-xl font-semibold mb-1">Plano Terapêutico</h4><p class="text-gray-600">Juntos, definiremos um plano de ação realista e 100% personalizado para você.</p></div></div>
-                    <div class="card flex items-start gap-4"><div class="bg-custom-blue text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">4</div><div><h4 class="text-xl font-semibold mb-1">Acompanhamento</h4><p class="text-gray-600">Monitoramos seu progresso, ajustamos o plano e garantimos que você se sinta com amparo.</p></div></div>
+                    <div class="card flex items-start gap-4">
+                        <div class="bg-custom-purple-dark text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">1</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-custom-purple-dark">Escuta Profunda</h4>
+                            <p class="text-gray-600">A primeira conversa é para ouvir sua história e entender seus objetivos de vida.</p>
+                        </div>
+                    </div>
+                    <div class="card flex items-start gap-4">
+                        <div class="bg-custom-purple-dark text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">2</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-custom-purple-dark">Mapeamento Clínico</h4>
+                            <p class="text-gray-600">Traçamos um diagnóstico preciso com base na conversa e em exames complementares.</p>
+                        </div>
+                    </div>
+                    <div class="card flex items-start gap-4">
+                        <div class="bg-custom-purple-dark text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">3</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-custom-purple-dark">Plano Terapêutico</h4>
+                            <p class="text-gray-600">Definimos juntos um plano de ação realista e totalmente personalizado para você.</p>
+                        </div>
+                    </div>
+                    <div class="card flex items-start gap-4">
+                        <div class="bg-custom-purple-dark text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-lg">4</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-custom-purple-dark">Acompanhamento</h4>
+                            <p class="text-gray-600">Monitoramos seu progresso, ajustamos o plano e garantimos que você se sinta amparado em cada etapa.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ESTE TRATAMENTO É PARA VOCÊ (AZUL ESCURO) -->
         <section class="py-20 md:py-28 bg-custom-dark-blue text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Este tratamento é para você?</h2>
-                    <p class="mt-4 text-lg text-blue-100">Meu compromisso é com a ética e a transparência. Este tratamento é ideal para quem:</p>
+                    <p class="mt-4 text-lg text-blue-100">O compromisso é com a ética e a transparência. Este tratamento é ideal para quem:</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="card bg-white/10 border-white/20 text-center"><p class="text-white">Busca entender a raiz de sua dor, não apenas mascarar sintomas.</p></div>
-                    <div class="card bg-white/10 border-white/20 text-center"><p class="text-white">Está disposto(a) a participar ativamente do seu processo de melhora.</p></div>
-                    <div class="card bg-white/10 border-white/20 text-center"><p class="text-white">Valoriza uma relação médico-paciente baseada na confiança.</p></div>
-                    <div class="card bg-white/10 border-white/20 text-center"><p class="text-white">Compreende que a melhora é um processo gradual e sustentável.</p></div>
+                    <div class="card bg-white/10 border-white/20 text-center">
+                        <p class="text-white">Busca entender a raiz de sua dor, não apenas mascarar sintomas.</p>
+                    </div>
+                    <div class="card bg-white/10 border-white/20 text-center">
+                        <p class="text-white">Está disposto a participar ativamente do próprio processo de melhora.</p>
+                    </div>
+                    <div class="card bg-white/10 border-white/20 text-center">
+                        <p class="text-white">Valoriza uma relação medico paciente baseada na confiança.</p>
+                    </div>
+                    <div class="card bg-white/10 border-white/20 text-center">
+                        <p class="text-white">Entende que a melhora é um processo gradual e sustentável.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 md:py-28 bg-gray-50">
+        <!-- DEPOIMENTOS (CLARO) -->
+        <section id="resultados" class="py-20 md:py-28 bg-white">
+          <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold">O que os pacientes relatam</h2>
+              <p class="mt-4 text-lg text-gray-600">
+                Depoimentos de pessoas que decidiram enfrentar a dor com acompanhamento especializado.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="card">
+                <div class="flex items-center mb-2">
+                  <span class="text-yellow-stars text-lg">★★★★★</span>
+                  <span class="ml-2 text-sm text-gray-500">Avaliação do paciente</span>
+                </div>
+                <p class="text-gray-700 text-sm mb-3">
+                  "Cheguei exausta, com dor no corpo inteiro e sem esperança. Hoje consigo trabalhar, dormir melhor e voltei a ter vida social."
+                </p>
+                <p class="text-xs text-gray-500">M. S., 48 anos, dor generalizada há mais de 5 anos.</p>
+              </div>
+
+              <div class="card">
+                <div class="flex items-center mb-2">
+                  <span class="text-yellow-stars text-lg">★★★★★</span>
+                  <span class="ml-2 text-sm text-gray-500">Avaliação do paciente</span>
+                </div>
+                <p class="text-gray-700 text-sm mb-3">
+                  "Tinha muita dor nos joelhos e dificuldade para caminhar. Com o tratamento e o ajuste de peso, voltei a fazer minhas atividades."
+                </p>
+                <p class="text-xs text-gray-500">J. R., 56 anos, dor em joelhos e sobrepeso.</p>
+              </div>
+
+              <div class="card">
+                <div class="flex items-center mb-2">
+                  <span class="text-yellow-stars text-lg">★★★★★</span>
+                  <span class="ml-2 text-sm text-gray-500">Avaliação do paciente</span>
+                </div>
+                <p class="text-gray-700 text-sm mb-3">
+                  "Depois de anos tomando remédios sem resultado, pela primeira vez senti que alguém olhou minha história inteira, não só o exame."
+                </p>
+                <p class="text-xs text-gray-500">L. A., 52 anos, dor lombar crônica.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CUSTO INVISÍVEL (AGORA FUNDO ROXO ESCURO) -->
+        <section class="py-20 md:py-28 bg-custom-purple-dark">
             <div class="container mx-auto px-6">
                  <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">O custo invisível de adiar o cuidado.</h2>
-                    <p class="mt-4 text-lg text-gray-600">A dor crônica não tratada adequadamente não afeta apenas seu corpo. Ela cobra um preço em todas as áreas da sua vida.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">O custo invisível de adiar o cuidado.</h2>
+                    <p class="mt-4 text-lg text-white/90">
+                        A dor crônica não tratada adequadamente não afeta apenas seu corpo. Ela cobra um preço em todas as áreas da sua vida.
+                    </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card"><h3 class="text-xl font-semibold mb-2">Na sua carreira:</h3><p class="text-gray-600">A produtividade diminui e a energia para buscar novas oportunidades desaparece.</p></div>
-                    <div class="card"><h3 class="text-xl font-semibold mb-2">Nos seus relacionamentos:</h3><p class="text-gray-600">A irritabilidade e o cansaço constante podem criar distância de quem você ama.</p></div>
-                    <div class="card"><h3 class="text-xl font-semibold mb-2">Na sua saúde mental:</h3><p class="text-gray-600">A luta diária contra a dor pode levar à ansiedade e à depressão.</p></div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Na sua carreira:</h3>
+                        <p class="text-gray-600">A produtividade diminui e a energia para buscar novas oportunidades desaparece.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Nos seus relacionamentos:</h3>
+                        <p class="text-gray-600">A irritabilidade e o cansaço constante podem criar distância de quem você ama.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-2 text-custom-purple-dark">Na sua saúde mental:</h3>
+                        <p class="text-gray-600">A luta diária contra a dor pode levar a ansiedade e depressão.</p>
+                    </div>
                 </div>
-                 <p class="mt-12 text-center text-lg text-gray-800 font-medium">Investir no seu tratamento agora não é um custo, é a recuperação do seu bem mais precioso: <span class="text-custom-blue">você mesmo(a)</span>.</p>
+                 <p class="mt-12 text-center text-lg text-white font-medium">
+                    Investir no seu tratamento agora não é um custo. É a recuperação do seu bem mais precioso: 
+                    <span class="font-semibold">você mesmo.</span>
+                </p>
             </div>
         </section>
 
+        <!-- FAQ (CLARO) -->
         <section id="faq" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold">Dúvidas Frequentes</h2>
                 </div>
                 <div class="max-w-3xl mx-auto space-y-4" x-data="{ open: 1 }">
-                    <div class="border rounded-lg"><button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">O tratamento é coberto pelo plano de saúde?</span><span class="text-custom-blue text-2xl" x-text="open === 1 ? '-' : '+'"></span></button><div x-show="open === 1" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>Trabalhamos com diversos planos de saúde. Durante a avaliação inicial, nossa equipe verificará a cobertura do seu plano e explicará todas as opções de forma transparente.</p></div></div>
-                    <div class="border rounded-lg"><button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Terei que tomar remédios para sempre?</span><span class="text-custom-blue text-2xl" x-text="open === 2 ? '-' : '+'"></span></button><div x-show="open === 2" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>O objetivo é o contrário. Usamos a medicação como uma ferramenta para quebrar o ciclo da dor. A meta é, gradualmente, reduzir a dependência de medicamentos à medida que seu corpo encontra um novo equilíbrio.</p></div></div>
-                    <div class="border rounded-lg"><button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center"><span class="font-semibold text-lg">Em quanto tempo verei os resultados?</span><span class="text-custom-blue text-2xl" x-text="open === 3 ? '-' : '+'"></span></button><div x-show="open === 3" x-collapse x-cloak class="p-6 pt-0 text-gray-600"><p>Cada organismo reage de uma forma. Algumas pessoas sentem alívio nas primeiras semanas. No entanto, a melhora sustentável é um processo que construímos juntos. O foco é no progresso constante, não na velocidade.</p></div></div>
+                    <div class="border rounded-lg">
+                        <button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center">
+                            <span class="font-semibold text-lg">O tratamento é coberto pelo plano de saúde?</span>
+                            <span class="text-custom-purple-dark text-2xl" x-text="open === 1 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="open === 1" x-collapse x-cloak class="p-6 pt-0 text-gray-600">
+                            <p>Trabalhamos com diversos planos de saúde. Durante a avaliação inicial, nossa equipe verifica a cobertura do seu plano e explica todas as opções de forma transparente.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center">
+                            <span class="font-semibold text-lg">Terei que tomar remédios para sempre?</span>
+                            <span class="text-custom-purple-dark text-2xl" x-text="open === 2 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="open === 2" x-collapse x-cloak class="p-6 pt-0 text-gray-600">
+                            <p>O objetivo é o contrário. A medicação é usada como ferramenta para quebrar o ciclo da dor. A meta é reduzir a dependência de medicamentos conforme seu corpo encontra um novo equilíbrio.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center">
+                            <span class="font-semibold text-lg">Em quanto tempo verei os resultados?</span>
+                            <span class="text-custom-purple-dark text-2xl" x-text="open === 3 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="open === 3" x-collapse x-cloak class="p-6 pt-0 text-gray-600">
+                            <p>Cada organismo reage de uma forma. Algumas pessoas sentem alívio nas primeiras semanas. No entanto, a melhora sustentável é um processo construída em conjunto. O foco é no progresso constante, não apenas na velocidade.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="py-20 md:py-28 bg-custom-purple-light">
+        <!-- CONTATO / CTA FINAL (ROXO ESCURO) -->
+        <section id="contato" class="py-20 md:py-28 bg-custom-purple-dark text-white">
             <div class="container mx-auto px-6 text-center">
                  <div class="max-w-3xl mx-auto">
-                    <p class="text-gray-500">ENTRE EM CONTATO PARA</p>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">AGENDAR SUA CONSULTA</h2>
-                    <p class="text-lg">Segunda a Quinta: 08h às 17h | Sexta: 08h às 13h</p>
+                    <p class="text-sm tracking-[0.2em] uppercase text-white/80">Entre em contato para</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Agendar sua consulta</h2>
+                    <p class="text-lg">Segunda a quinta: 08h às 17h | Sexta: 08h às 13h</p>
                     <p class="text-lg mb-8">(41) 3336-1540</p>
-                    <a href="tel:+5541984820272" class="cta-button bg-custom-purple-dark text-white font-semibold py-4 px-10 rounded-full text-lg inline-block mb-12">
+                    <a href="https://wa.me/5541984820272" target="_blank" class="cta-button bg-white text-custom-purple-dark font-semibold py-4 px-10 rounded-full text-lg inline-block mb-12">
                         Telefone: 41 98482-0272
                     </a>
                     <div class="w-full h-80 rounded-lg shadow-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.220582298284!2d-49.29419168498585!3d-25.43098198378853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce383713a537b%3A0x538c23a2b72e81e!2sR.%20Teixeira%20Soares%2C%2050%20-%20Semin%C3%A1rio%2C%20Curitiba%20-%20PR%2C%2080240-440!5e0!3m2!1spt-BR!2sbr!4v1661474558451!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.220582298284!2d-49.29419168498585!3d-25.43098198378853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce383713a537b%3A0x538c23a2b72e81e!2sR.%20Teixeira%20Soares%2C%2050%20-%20Seminario%2C%20Curitiba%20-%20PR%2C%2080240-440!5e0!3m2!1spt-BR!2sbr!4v1661474558451!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                  </div>
             </div>
@@ -364,4 +534,3 @@
 
 </body>
 </html>
-
